@@ -15,6 +15,7 @@
     <element xsi:type="archimate:Capability" name="[PR10] Problem Management (PM)" id="6ebdb2f0-1929-4f71-945a-6d7b1d5e73aa"/>
     <element xsi:type="archimate:Capability" name="[PR2] Service Level Management (SLM)" id="0acab29d-1cd0-4483-8183-567b3ced98c6"/>
     <element xsi:type="archimate:Capability" name="[PR7] Customer Relationship Management (CRM)" id="53977299-0a5b-4c89-b999-0449b3de3c9b"/>
+    <element xsi:type="archimate:Capability" name="Extra capability" id="id-acd7c2c1ac64490988e5ee32c8808002"/>
   </folder>
   <folder name="Business" id="id-047b68a4baae47828d999ea98930b0cf" type="business">
     <element xsi:type="archimate:BusinessFunction" name="[PR6] Specify a new information security control" id="c809e404-81a6-4419-8e93-f78f8ea5acc6"/>
@@ -152,6 +153,7 @@
     <element xsi:type="archimate:BusinessProcess" name="[PR6] Perform access control" id="60a5d921-b138-4c0c-8552-aec451f10b14"/>
     <element xsi:type="archimate:BusinessProcess" name="[PR11] Verify configuration records" id="6ad9dcdf-7d1b-4a59-885a-0e394757062e"/>
     <element xsi:type="archimate:BusinessFunction" name="[PR11] Inform stakeholders about inconsistencies and identify follow-up actions" id="42f9ba71-e852-4c21-bf83-eac044dcc1cc"/>
+    <element xsi:type="archimate:BusinessService" name="Business Service" id="id-378f41d2379b4b3aa9089d26b6a286af"/>
   </folder>
   <folder name="Application" id="id-170fc92705d640edb95a56b874ec3596" type="application"/>
   <folder name="Technology &amp; Physical" id="id-b88bae40d46b4ebdb2cbf98fa24a7b21" type="technology"/>
@@ -318,6 +320,7 @@
     <element xsi:type="archimate:CompositionRelationship" id="id-fa98fa8573c247bfaeb0105e195a2513" source="f1ddff78-8de1-4919-98aa-a090f57976c3" target="b6267ef6-ffb9-4e5c-9209-50de290d82d7"/>
     <element xsi:type="archimate:CompositionRelationship" id="id-c527c2011655479e8f843fbc6c1158c4" source="f1ddff78-8de1-4919-98aa-a090f57976c3" target="c2b86f0e-2c93-49fe-85be-deb87902171f"/>
     <element xsi:type="archimate:CompositionRelationship" id="id-9aa3b94ad1ab4e5faa74b88dce6d6b64" source="f1ddff78-8de1-4919-98aa-a090f57976c3" target="8e730a04-7ce9-4886-972d-342670dbda84"/>
+    <element xsi:type="archimate:RealizationRelationship" id="id-344d208cd986457a86c706e5fb5b9a39" source="id-378f41d2379b4b3aa9089d26b6a286af" target="id-acd7c2c1ac64490988e5ee32c8808002"/>
   </folder>
   <folder name="Views" id="id-9028373be18a487395505e3d3e1ce919" type="diagrams">
     <element xsi:type="archimate:ArchimateDiagramModel" name="FitSM Startpagina" id="id-0feaf3ae5a614bf682cdc52d36a0b898">
@@ -396,7 +399,7 @@
       <child xsi:type="archimate:Group" id="id-0667938e33df41c7b0ee465b110a9709" name="Protect and Secure" textAlignment="1">
         <bounds x="792" y="36" width="145" height="253"/>
         <child xsi:type="archimate:DiagramObject" id="id-d21f69f33603409290b7c42a232f34ab" textPosition="1" archimateElement="1db2bb8c-6c32-4eb1-a625-34b0f5631587">
-          <bounds x="12" y="36" width="120" height="55"/>
+          <bounds x="12" y="72" width="120" height="55"/>
           <child xsi:type="archimate:DiagramModelReference" id="id-8676329456074adebc6c46f142c99405" alpha="0" model="id-252eb00e834741c3b43bdbbd8b017b26">
             <bounds x="96" y="24" width="25" height="25"/>
             <feature name="lineAlpha" value="0"/>
@@ -436,6 +439,13 @@
             <feature name="lineAlpha" value="0"/>
           </child>
         </child>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-00cc006dd124406ca35c090ae6366c91" targetConnections="id-205372321f994876ae3b640a4031b5eb" archimateElement="id-acd7c2c1ac64490988e5ee32c8808002">
+        <bounds x="324" y="480" width="120" height="55"/>
+      </child>
+      <child xsi:type="archimate:DiagramObject" id="id-ef860b332a844c108663751e983632c0" archimateElement="id-378f41d2379b4b3aa9089d26b6a286af">
+        <bounds x="398" y="693" width="120" height="55"/>
+        <sourceConnection xsi:type="archimate:Connection" id="id-205372321f994876ae3b640a4031b5eb" source="id-ef860b332a844c108663751e983632c0" target="id-00cc006dd124406ca35c090ae6366c91" archimateRelationship="id-344d208cd986457a86c706e5fb5b9a39"/>
       </child>
     </element>
     <element xsi:type="archimate:ArchimateDiagramModel" name="[PR10] Problem Management (PM)" id="id-8436254d211f40beabeb7ba80f3f6d0b">
